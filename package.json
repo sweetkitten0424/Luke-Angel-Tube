@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.5.0",
+    "@types/jsdom": "^28.0.3",
     "@uploadthing/react": "^6.6.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.400.0",
