@@ -1,7 +1,9 @@
 import { UserProvider } from '@auth0/nextjs-auth0/client';
-import Navbar from '@/components/Navbar';
-import SidebarWrapper from '@/components/SidebarWrapper';
-import './globals.css';
+import Navbar from '@/src/components/Navbar';
+import SidebarWrapper from '@/src/components/SidebarWrapper';
+import "./globals.css";
+
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

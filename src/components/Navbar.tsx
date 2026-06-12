@@ -4,6 +4,8 @@ import { Menu, Video, User } from 'lucide-react';
 import { useSidebarStore } from '@/src/lib/store';
 import SearchField from './SearchField';
 import Link from 'next/link';
+// 🛠️ 1. Import Suspense below
+import { Suspense } from 'react';
 
 export default function Navbar() {
   const toggleSidebar = useSidebarStore((state) => state.toggle);
@@ -18,8 +20,10 @@ export default function Navbar() {
         <Link href="/" className="font-bold text-xl tracking-tighter text-red-500">ViewTube</Link>
       </div>
 
-      {/* Embedded Client-Side Search Mechanism */}
-      <SearchField />
+      {/* 🛠️ 2. Wrap the Search Field component in a Suspense fallback shell */}
+      <Suspense fallback={<div className="flex-1 max-w-[600px] mx-4 h-9 bg-zinc-950 border border-zinc-800 rounded-full animate-pulse" />}>
+        <SearchField />
+      </Suspense>
 
       <div className="flex items-center gap-3 flex-shrink-0">
         {user ? (
