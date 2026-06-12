@@ -1,7 +1,7 @@
 import { UserProvider } from '@auth0/nextjs-auth0/client';
 import Navbar from '@/src/components/Navbar';
 import SidebarWrapper from '@/src/components/SidebarWrapper';
-import "./globals.css";
+import './globals.css';
 
 
 
